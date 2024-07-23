@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
 import './App.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,12 +14,14 @@ import PaperComponent from './ProductionComponents/PaperComponent.jsx'
 
 import Home from './Home.jsx'
 import Footer from './Footer.jsx'
+import ScrollToAnchor from './ScrollToAnchor.jsx'
 
 function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
+          <ScrollToAnchor />        
           <Routes>
               <Route path="/" element={<Home />} />
               
@@ -32,7 +34,7 @@ function App() {
               <Route path="/university-projects" element={<UniversityProjects renderAsPage={true} />} />
               <Route path="/university-projects/:project_id" element={<ProjectComponent />} />
           </Routes>
-      </BrowserRouter>
+      </HashRouter>
 
       <Footer />
     </>

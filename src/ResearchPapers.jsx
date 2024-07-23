@@ -1,10 +1,10 @@
+import { Link } from "react-router-dom";
 import { limitText } from "./utils";
 
 function ResearchPapers({ renderAsPage }) {
     console.log(renderAsPage);
     return (
-        <div className={`projects-section ${renderAsPage ? "body-section" : ""}`}>
-            <a name="ResearchPapers"></a>
+        <div id="research-papers" className={`projects-section ${renderAsPage ? "body-section" : ""}`}>
             <div className="projects-section-title">
                 <span></span>
                 <h6>Research</h6>
@@ -15,12 +15,12 @@ function ResearchPapers({ renderAsPage }) {
                     const project = researchPapers[project_key];
                     const project_url = `/research-papers/${project_key}`;
                     return (
-                        <a key={project_key} href={project_url}>
+                        <Link key={project_key} to={project_url}>
                             <div className="projects-section-block">
                                 <h3 className="project-title">{project.title}</h3>
                                 <p className="project-desc">{limitText(project.abstract)}</p>
                             </div>
-                        </a>
+                        </Link>
                     )
                 })
                     

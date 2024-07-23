@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faReact } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faReact } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
@@ -20,6 +20,9 @@ function Footer() {
                     </a>
                     <a target="blank" href="mailto: dorard.antoine@gmail.com">
                         <FontAwesomeIcon className="pointer" style={{color: "white"}} icon={faEnvelope} />
+                    </a>
+                    <a target="blank" href="https://github.com/antoine-dorard">
+                        <FontAwesomeIcon className="pointer" style={{color: "white"}} icon={faGithub} />
                     </a>
                 </Icons>
                 <div

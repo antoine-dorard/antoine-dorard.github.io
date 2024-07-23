@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +10,19 @@ import PersonalProjects from "./PersonalProjects";
 import UniversityProjects from "./UniversityProjects";
 import Footer from "./Footer";
 import ResearchPapers from "./ResearchPapers";
+import styled from "styled-components";
+
+const ThesisNameBlock = styled.span`
+    font-weight: bold;
+    font-style: italic;
+`
+
+const UniversitySubTitle = styled.span`
+    font-size: 1.5em;
+    font-weight: normal;
+    font-family: "Montserrat", serif;
+    font-style: italic;
+`
 
 function Home() {
     const imageRef = useRef(null);
@@ -17,7 +30,7 @@ function Home() {
     const handleScroll = () => {
         imageRef.current.style.transform = `translateY(${
             -window.scrollY * 0.1
-        }px) rotate(7deg)`;
+        }px) rotate(0deg)`;
     };
 
     useEffect(() => {
@@ -28,39 +41,43 @@ function Home() {
     return (
         <>
             <div id="nav">
-                <a href="#about">About Me</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <Link to="#about">About Me</Link>
+                <Link to="#projects">Projects</Link>
+                <Link to="#contact">Contact</Link>
             </div>
 
-            <a name="about"></a>
+            <a id="about"></a>
             <div id="hero-container">
                 <div id="hero">
                     <div className="self-image" ref={imageRef}></div>
-                    <h1>ANTOINE DORARD</h1>
-                    <p>
-                    Welcome to my website. On this page you will find projects, either done at university in collaboration with other fellow students, or personal, may they be with undertaken alone or with other people. 
-
-I also recently finished my thesis called “Enhancing Android Vulnerability Detection: Integrating LLMs with SAST Tools”, for which you may find more information in the Research section below.
+                    <h1 style={{marginBottom: 0}}>ANTOINE DORARD</h1>
+                    <UniversitySubTitle>Bsc Data Science and Artificial Intelligence</UniversitySubTitle>
+                    <p style={{marginTop: '2em'}}>
+                        Welcome to my website! 
+                        <br/><br/>
+                        Here, you’ll discover a portfolio of projects completed at Maastricht University with my peers, as well as various side projects I’ve pursued independently or with collaborators.
+                        <br/><br/>
+                        Additionally, I have recently completed my thesis, titled <ThesisNameBlock>Enhancing Android Vulnerability Detection: Integrating LLMs with SAST Tools</ThesisNameBlock>. You can find more details about this work in the Research section below.
                     </p>
+                    
                 </div>
 
-                <a href="#ResearchPapers">
+                <Link to="#research-papers">
                     <div id="explore-projects-button">
                         <span>Explore my projects</span>
                         <FontAwesomeIcon icon={faCaretDown} />
                     </div>
-                </a>
+                </Link>
             </div>
 
-            <a name="projects"></a>
+            <a id="projects"></a>
             <div className="body-section">
                 <ResearchPapers />
                 <PersonalProjects />
                 <UniversityProjects />
             </div>
 
-            <a name="contact"></a>
+            <a id="contact"></a>
 
         </>
     );
