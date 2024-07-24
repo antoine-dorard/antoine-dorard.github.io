@@ -92,6 +92,12 @@ export const universityProjects = {
             github: "",
             link: "",
         },
+        pictures: [
+            {
+                caption: "Chatbot Interface",
+                url: "/chatbot/chatbot.png"
+            },
+        ]
     },
     hex: {
         title: "Board Game: Hex",
@@ -114,6 +120,20 @@ export const universityProjects = {
             github: "",
             link: "",
         },
+        pictures: [
+            {
+                caption: "Hex Game Menu",
+                url: "/hex/menu.png"
+            },
+            {
+                caption: "Hex Gameplay",
+                url: "/hex/game.png"
+            },
+            {
+                caption: "Hex End Screen",
+                url: "/hex/end_screen.png"
+            },
+        ]
     },
     golf: {
         title: "3D Golf Game",
@@ -134,6 +154,16 @@ export const universityProjects = {
             github: "",
             link: "",
         },
+        pictures: [
+            {
+                caption: "Golf Game Menu",
+                url: "/golf/menu.png"
+            },
+            {
+                caption: "Golf Gameplay",
+                url: "/golf/gameplay1.png"
+            },
+        ]
     },
     pentominos: {
         title: "Pentominos",
@@ -155,5 +185,11 @@ export const universityProjects = {
             github: "",
             link: "",
         },
+        pictures: [
+            {
+                caption: "Revisted Tetris Game",
+                url: "/pentominos/game_frame.jpg"
+            },
+        ]
     },
 }

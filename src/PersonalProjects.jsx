@@ -42,6 +42,10 @@ export const personalProjects = {
         description: "Two other fellow students and I developed a prototype of a decentralized platform for open journalism. The idea was to promote truth and unbiased information via video content, leveraging the blockchain technology and IPFS, a “peer-to-peer content delivery network”.",
         about: "This project involved creating a frontend with Vue.js and a backend combining the EOS blockchain with IPFS (InterPlanetary File System). The blockchain architecture, combined with a decentralized file storage protocol such as IPFS, was the central component of this idea, creating a decentralized way of storing videos produced by the community. The blockchain’s role was to maintain an immutable record of video uploads, mapping wallet hashes to IPFS video hashes. Aside from uploading, the community was incentivized, through the collection of tokens (EOS coin), to upvote or downvote videos they found relevant or not. The frontend, a website where users could upload videos that they judged worth sharing with the world as valuable information, served as the gateway between the average internet user and the complex decentralized architecture that, in theory, would allow the bypassing of potential censorship by authoritarian governments. This was the main motivation behind Cifler, which grew especially after the start of the Ukrainian War. Of course, this project did not come without legal challenges, which were not our main area of expertise at the time. With the advice of a professor from the Faculty of Law at Maastricht University, we came to realize that this project would require more concrete legal research before considering its more technical aspects, which eventually led to this project becoming an open idea for the future.",
         technologies: [],
+        headerImg: {
+            file: "/cifler/instagram_picture.jpg",
+            objectPosition: "center"
+        },
         pictures: [
             {
                 caption: "Presentation of the project at a Cifler event",
@@ -64,7 +68,7 @@ export const personalProjects = {
     online_newsletter_platform: {
         title: "Online Newsletter Platform",
         description: "Developed a complete web application for sending recurring newsletter which includes the frontend, the admin panel, the authentication server, the file server, and the general backend server. It involed working with many technologies such as Vue.js, Node.js, Flask, MySQL, JWT and more.",
-        about: "From understanding the client's needs to providing a fully fonctionnal tool where the client could configure the newsletter, add articles and automatically send them to the subscribers, this project was an invaluable experience in terms of communication with the client and technical skills. The client was an individual who wanted to automate the process of sending newsletters to his subscribers. The project was divided into several parts: the frontend, the admin panel, the authentication server, the file server, and the general backend server. The frontend was developed with Vue.js, the admin panel with Flask, the authentication server with Express.js, the file and backend server with Flask. The database was MySQL. The project also involved the use of JWT for authentication and authorization. This project also involved deploying to a production server where the client could access the application securely, and where the application could automatically send emails to the subscribers.",
+        about: "From understanding the client's needs to providing a fully fonctionnal tool where the client could configure the newsletter, add articles and automatically send them to the subscribers, this project was an invaluable experience in terms of communication with the client and technical skills. The client was an individual who wanted to automate the process of sending newsletters to his subscribers. The project was divided into several parts: the frontend, the admin panel, the authentication server, the file server, and the general backend server. The public frontend and the admin panel was developed with Vue.js, the authentication server with Express.js, the file and backend server with Flask. The database was MySQL. The project utilized JWT for authentication and authorization and included deployment to a production server. This allowed the client to securely access the application, which could automatically send emails to subscribers.",
         technologies: [
             "Vue.js",
             "Node.js",
@@ -72,6 +76,10 @@ export const personalProjects = {
             "MySQL",
             "JWT",
         ],
+        headerImg: {
+            file: "/SME/login.png",
+            objectPosition: "top"
+        },
         pictures: [
             {
                 caption: "Admin Panel Login Page",
@@ -100,6 +108,20 @@ export const personalProjects = {
             github: "",
             link: "",
         },
+        pictures: [
+            {
+                caption: "Transcript Page",
+                url: "/AIVT/transcript.png"
+            },
+            {
+                caption: "Subtitles Page",
+                url: "/AIVT/subtitles.png"
+            },
+            {
+                caption: "Music Page",
+                url: "/AIVT/music.png"
+            },
+        ],
     },
 }
     

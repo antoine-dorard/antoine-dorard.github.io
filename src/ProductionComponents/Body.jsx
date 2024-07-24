@@ -2,7 +2,7 @@
  * Component to display a project details
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
@@ -48,6 +48,11 @@ const HeaderImgPlaceholder = styled.div`
 
 function Body({ production = null, isPaper = false}) {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>  
             {
